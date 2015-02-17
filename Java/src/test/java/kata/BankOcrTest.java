@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.List;
 
-import static kata.TestInput.allDigits;
+import static kata.Input.allDigits;
 import static org.junit.Assert.assertEquals;
 
 public class BankOcrTest {

@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Shortcut methods to get input test data.
  */
-public class TestInput {
+public class Input {
 
     public static List<String> allDigits() throws IOException {
         return read("one_to_nine.txt");
