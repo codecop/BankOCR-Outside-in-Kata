@@ -25,14 +25,14 @@ Write a program that can take this file and parse it into actual account numbers
 
 ## Constraint: Outside-In ##
 
-In Outside-In (London school, top-down or "mockist TDD") you start with the
-interactions and collaborators upfront (especially those at top levels),
-mocking necessary dependencies. With every finished component, you move to
-the previously mocked collaborators and start with TDD again there, creating
+In Outside-In (London school, top-down or "mockist TDD") you build the
+system from the "outside-in", following the user interaction through
+all the parts of the system. You start with the interactions and collaborators
+upfront (especially those at top levels), mocking necessary dependencies (or creating
+fake implementations). With every finished component, you move to the previously
+mocked collaborators and start with TDD again there, creating
 actual implementations (which, even though used, were not needed before
-thanks to abstractions).
-
-See [Emily Bache's article on Outside-In development](http://coding-is-like-cooking.info/2013/04/outside-in-development-with-double-loop-tdd/)
+thanks to abstractions). See [Emily Bache's article on Outside-In development](http://coding-is-like-cooking.info/2013/04/outside-in-development-with-double-loop-tdd/)
 for a discussion of Outside-In both with London school and classic TDD.
 
 ### License ###
