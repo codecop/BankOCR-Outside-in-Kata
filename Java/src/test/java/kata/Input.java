@@ -1,7 +1,6 @@
 package kata;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -37,8 +36,8 @@ public class Input {
         return read("only_fives.txt");
     }
 
-    public static List<String> onlySixs() throws IOException {
-        return read("only_sixs.txt");
+    public static List<String> onlySixes() throws IOException {
+        return read("only_sixes.txt");
     }
 
     public static List<String> onlySevens() throws IOException {
