@@ -57,36 +57,4 @@ public class Input {
         return new TextFileReader().readLines("src/test/resources/" + fileName);
     }
 
-    public static List<String> one() {
-        return Arrays.asList(//
-                "   ", //
-                "  |", //
-                "  |", //
-                "   ");
-    }
-
-    public static List<String> two() {
-        return Arrays.asList(//
-                " _ ", //
-                " _|", //
-                "|_ ", //
-                "   ");
-    }
-
-    public static List<String> three() {
-        return Arrays.asList(//
-                " _ ", //
-                " _|", //
-                " _|", //
-                "   ");
-    }
-
-    public static List<String> four() {
-        return Arrays.asList(//
-                "   ", //
-                "|_|", //
-                "  |", //
-                "   ");
-    }
-
 }
