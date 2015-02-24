@@ -12,13 +12,8 @@ import java.util.List;
 class TextFileReader {
 
     public List<String> readLines(String fileName) throws IOException {
-        BufferedReader in = new BufferedReader(new FileReader(fileName));
-        try {
-
+        try (BufferedReader in = new BufferedReader(new FileReader(fileName))){
             return readLines(in);
-
-        } finally {
-            in.close();
         }
     }
 
