@@ -12,10 +12,11 @@ public class BankOcrTest {
 
     @Test
     public void shouldParseOcrLine() throws IOException {
+        // TODO failing test, start here
         // guiding test from outside in as starting point.
         // a) ignore this test
-        // b) or stub everything in this constructor
-        // c) or let it be red for most of the time
+        // b) or stub everything in the BankOcr constructor
+        // c) or let it be red until the end
         BankOcr bankOcr = new BankOcr();
 
         List<AccountNumber> accountNumbers = bankOcr.parse(allDigits());
