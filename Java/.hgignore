@@ -10,3 +10,4 @@ syntax: glob
 *.iwr
 
 target
+handout
