@@ -1,4 +1,4 @@
-# BankOCR #
+﻿# BankOCR #
 
 [BankOCR Code Kata](http://codingdojo.org/cgi-bin/index.pl?KataBankOCR), initial setup
 for Java focusing on Outside-In development.
@@ -34,6 +34,19 @@ mocked collaborators and start with TDD again there, creating
 actual implementations (which, even though used, were not needed before
 thanks to abstractions). See [Emily Bache's article on Outside-In development](http://coding-is-like-cooking.info/2013/04/outside-in-development-with-double-loop-tdd/)
 for a discussion of Outside-In both with London school and classic TDD.
+
+## Where to start ##
+
+There is a failing guiding test `src/test/java/kata/BankOcrTest.java`,
+which you can use as starting point. It tests the `src/main/java/kata/BankOcr.java`,
+which contains the empty, outside interface of the API you need to create.
+There are different example inputs in `src/test/resources`.
+[Mockito](http://mockito.org/) is provided in the `pom.xml` in case you want to use 
+a mocking library.
+
+## Other languages ##
+* [Javascript with Jasmine](https://bitbucket.org/carlosble/bankocr-kata) by Carlos Ble
+* [Blog post with Python integration test](http://technivore.org/posts/2013/12/23/coding-kata-bank-ocr.html) by Matthew Rich
 
 ### License ###
 [New BSD License](http://opensource.org/licenses/bsd-license.php), see `license.txt` in repository.
