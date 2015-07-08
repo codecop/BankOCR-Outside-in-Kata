@@ -30,5 +30,10 @@
         {
             return number.GetHashCode();
         }
+
+        public override string ToString()
+        {
+            return number;
+        }
     }
 }
