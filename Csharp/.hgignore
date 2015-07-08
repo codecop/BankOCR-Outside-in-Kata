@@ -1,0 +1,8 @@
+syntax: glob
+*.bak
+
+bin/*
+obj/*
+
+TestResult.xml
+run_tests.bat
