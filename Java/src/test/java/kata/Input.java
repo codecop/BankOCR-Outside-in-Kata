@@ -52,6 +52,10 @@ public class Input {
         return read("only_nines.txt");
     }
 
+    public static List<String> twoLines() throws IOException {
+        return read("two_lines.txt");
+    }
+
     private static List<String> read(String fileName) throws IOException {
         return new TextFileReader().readLines("src/test/resources/" + fileName);
     }
