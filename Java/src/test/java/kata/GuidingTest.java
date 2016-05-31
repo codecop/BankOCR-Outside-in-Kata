@@ -8,7 +8,7 @@ import java.util.List;
 import static kata.Input.allDigits;
 import static org.junit.Assert.assertEquals;
 
-public class BankOcrTest {
+public class GuidingTest {
 
     @Test
     public void shouldParseOcrLine() throws IOException {
@@ -24,6 +24,5 @@ public class BankOcrTest {
         assertEquals(1, accountNumbers.size());
         assertEquals(new AccountNumber("123456789"), accountNumbers.get(0));
     }
-
 
 }
