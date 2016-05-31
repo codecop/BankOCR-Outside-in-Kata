@@ -1,6 +1,5 @@
 package kata;
 
-import java.io.IOException;
 import java.util.List;
 
 /**
@@ -8,7 +7,7 @@ import java.util.List;
  */
 public class BankOcr {
 
-    public List<AccountNumber> parse(List<String> rawLines) throws IOException {
+    public List<AccountNumber> parse(List<String> rawLines) {
         throw new UnsupportedOperationException("not implemented");
     }
 
