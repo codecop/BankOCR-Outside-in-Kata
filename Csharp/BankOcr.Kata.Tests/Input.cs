@@ -65,7 +65,7 @@ namespace Kata.Tests
 
         private static IEnumerable<string> Read(string fileName)
         {
-            return File.ReadAllLines(Path.Combine(@"..\..\Resources", fileName));
+            return File.ReadAllLines(Path.Combine(@"Resources", fileName));
         }
     }
 }

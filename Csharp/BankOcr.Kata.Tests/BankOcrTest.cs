@@ -1,11 +1,10 @@
-﻿using NUnit.Framework;
+﻿using Xunit;
 
 namespace Kata.Tests
 {
-    [TestFixture]
     public class BankOcrTest
     {
-        [Test]
+        [Fact]
         public void ShouldParseOcrLine()
         {
             // TODO failing test, start here
@@ -18,8 +17,8 @@ namespace Kata.Tests
 
             var accountNumbers = bankOcr.Parse(Input.AllDigits());
 
-            Assert.AreEqual(1, accountNumbers.Count);
-            Assert.AreEqual(new AccountNumber("123456789"), accountNumbers[0]);
+            Assert.Equal(1, accountNumbers.Count);
+            Assert.Equal(new AccountNumber("123456789"), accountNumbers[0]);
         }
 
     }
