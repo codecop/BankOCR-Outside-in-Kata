@@ -37,6 +37,7 @@ for a discussion of Outside-In both with London school and classic TDD.
 
 ## Where to start ##
 
+This is a Microsoft Visual Studio project for the .NET 4.5 framework.
 There is a failing [NUnit](http://www.nunit.org/) guiding test `BankOcrTest.cs`,
 which you can use as starting point. It tests the `BankOcr.cs`,
 which contains the empty, outside interface of the API you need to create.
