@@ -1,6 +1,6 @@
 ﻿# BankOCR #
 
-[BankOCR Code Kata](http://codingdojo.org/cgi-bin/index.pl?KataBankOCR), initial setup
+[BankOCR Code Kata](http://codingdojo.org/kata/BankOCR/), initial setup
 for C# focusing on Outside-In development.
 
 ## Assignment: BankOCR ##
