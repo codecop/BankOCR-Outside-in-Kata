@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Code Cop")]
-[assembly: AssemblyProduct("BankOcr.Kata.Tests")]
+[assembly: AssemblyProduct("BankOcr-Kata.Tests")]
 [assembly: AssemblyCopyright("Copyright © 2015")]
 [assembly: AssemblyTrademark("")]
 

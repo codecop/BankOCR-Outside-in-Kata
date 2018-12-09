@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <AssemblyName>BankOcr.Kata.Tests</AssemblyName>
-    <PackageId>>BankOcr.Kata.Tests</PackageId>
+    <AssemblyName>BankOcr-Kata.Tests</AssemblyName>
+    <PackageId>>BankOcr-Kata.Tests</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <RuntimeFrameworkVersion>2.0.5</RuntimeFrameworkVersion>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>

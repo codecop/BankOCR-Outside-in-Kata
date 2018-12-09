@@ -41,7 +41,7 @@ This is a .NET Core 2.0 project.
 There is a failing [xUnit](https://xunit.github.io/) guiding test `BankOcrTest.cs`,
 which you can use as starting point. It tests the `BankOcr.cs`,
 which contains the empty, outside interface of the API you need to create.
-There are different example inputs in `BankOcr.Kata.Tests/Resources`.
+There are different example inputs in `BankOcr-Kata.Tests/Resources`.
 [Moq](https://github.com/Moq/moq) is provided in the dependencies in case 
 you want to use a mocking library.
 
