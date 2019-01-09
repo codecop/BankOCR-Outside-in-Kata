@@ -3,15 +3,15 @@ package kata;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.hamcrest.text.IsEqualIgnoringCase.equalToIgnoringCase;
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.hamcrest.MatcherAssert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Test the JUnit infrastructure.
  */
-public class JUnit4Test {
+public class JUnit5Test {
 
     @Test
     public void shouldAssertPlainJUnit() {
