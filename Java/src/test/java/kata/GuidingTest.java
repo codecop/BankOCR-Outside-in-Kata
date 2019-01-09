@@ -5,7 +5,6 @@ import org.junit.Test;
 import java.io.IOException;
 import java.util.List;
 
-import static kata.Input.allDigits;
 import static org.junit.Assert.assertEquals;
 
 public class GuidingTest {
@@ -19,7 +18,7 @@ public class GuidingTest {
         // c) or let it be red until the end
         BankOcr bankOcr = new BankOcr();
 
-        List<AccountNumber> accountNumbers = bankOcr.parse(allDigits());
+        List<AccountNumber> accountNumbers = bankOcr.parse(Input.allDigits());
 
         assertEquals(1, accountNumbers.size());
         assertEquals(new AccountNumber("123456789"), accountNumbers.get(0));
