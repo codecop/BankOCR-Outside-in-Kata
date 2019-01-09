@@ -2,7 +2,6 @@ package kata;
 
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsEqual.equalTo;
-import static org.hamcrest.text.IsEqualIgnoringCase.equalToIgnoringCase;
 import static org.junit.Assert.assertEquals;
 
 import org.hamcrest.MatcherAssert;
@@ -21,11 +20,6 @@ public class JUnit4Test {
     @Test
     public void shouldAssertWithHamcrestCore() {
         MatcherAssert.assertThat(1 + 1, is(equalTo(2)));
-    }
-
-    @Test
-    public void shouldAssertWithHamcrestLibrary() {
-        MatcherAssert.assertThat("codecop", is(equalToIgnoringCase("CodeCop")));
     }
 
 }
