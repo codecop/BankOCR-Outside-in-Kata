@@ -1,6 +1,8 @@
 package kata;
 
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 
 /**
@@ -57,7 +59,7 @@ public class Input {
     }
 
     private static List<String> read(String fileName) throws IOException {
-        return new TextFileReader().readLines("src/test/resources/" + fileName);
+        return Files.readAllLines(Paths.get("src/test/resources", fileName)); 
     }
 
 }
