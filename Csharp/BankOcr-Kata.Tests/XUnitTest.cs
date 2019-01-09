@@ -3,9 +3,10 @@ using Xunit;
 
 namespace Org.Codecop.Hello.Tests
 {
-    /**
-    * Test the xUnit infrastructure.
-    */
+    /// <summary>
+    /// Test the xUnit infrastructure.
+    /// See https://xunit.github.io/
+    /// </summary>
     public class XUnitTest
     {
 

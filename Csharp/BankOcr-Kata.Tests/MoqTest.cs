@@ -8,10 +8,10 @@ namespace Kata.Tests
         bool Parse(string value);
     }
 
-    /**
-     * Test the infrastructure.
-     * See https://github.com/Moq/moq4/wiki/Quickstart
-     */
+    /// <summary>
+    /// Test the infrastructure.
+    /// See https://github.com/Moq/moq4/wiki/Quickstart
+    /// </summary>
     public class MoqTest
     {
         [Fact]

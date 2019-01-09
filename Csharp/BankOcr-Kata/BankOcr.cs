@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Kata
 {
-    /**
-     * Example for the outside interface of the API we need to create.
-     */
+    /// <summary>
+    /// Example for the outside interface of the API we need to create.
+    /// </summary>
     public class BankOcr
     {
 

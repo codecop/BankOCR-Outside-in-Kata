@@ -1,8 +1,8 @@
 ﻿namespace Kata
 {
-    /**
-     * Value object for account numbers.
-     */
+    /// <summary>
+    /// Value object for account numbers.
+    /// </summary>
     public class AccountNumber
     {
         private readonly string number;

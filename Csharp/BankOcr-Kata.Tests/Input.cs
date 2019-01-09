@@ -3,9 +3,9 @@ using System.IO;
 
 namespace Kata.Tests
 {
-    /**
-     * Shortcut methods to get input test data.
-     */
+    /// <summary>
+    /// Shortcut methods to get input test data.
+    /// </summary>
     public static class Input
     {
         public static IEnumerable<string> AllDigits()
