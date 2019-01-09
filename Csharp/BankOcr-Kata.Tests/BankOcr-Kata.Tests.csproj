@@ -17,7 +17,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  
+
   <ItemGroup>
     <ProjectReference Include="..\BankOcr-Kata\BankOcr.Kata.csproj">
       <Project>{c98f6f1a-95ec-4eef-8a1c-155b387996d1}</Project>
@@ -32,6 +32,8 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
     <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
     <PackageReference Include="Moq" Version="4.10.1" />
+    <PackageReference Include="NUnit" Version="3.11.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.11.0" />
   </ItemGroup>
 
 </Project>
