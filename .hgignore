@@ -1,13 +1,13 @@
 syntax: glob
 
-target
+target/
 
 ##
 ## Eclipse
 ##
 
 .project
-.settings
+.settings/
 .classpath
 .checkstyle
 .pmd
@@ -16,7 +16,7 @@ target
 ## IntelliJ
 ##
 
-.idea
+.idea/
 *.iml
 *.iwr
 
@@ -49,6 +49,7 @@ bld/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
+.vscode/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
