@@ -9,7 +9,7 @@ are provided as dependencies.
 * Download the required dependency with `dotnet restore`.
 * Run `dotnet test` to verify your setup and run the tests. You should see a test failure.
 
-## Where to start ##
+### Where to start ###
 
 There is a failing guiding test `BankOcrTest.cs`,
 which you can use as starting point. It tests the `BankOcr.cs`,
