@@ -1,9 +1,9 @@
 # coding=utf-8
 import unittest
 
+from test import sample_input
 from kata.accountnumber import AccountNumber
 from kata.bankocr import BankOcr
-from test import input
 
 
 class GuidingTestCase(unittest.TestCase):
@@ -16,7 +16,7 @@ class GuidingTestCase(unittest.TestCase):
         # c) or let it be red until the end
         bank_ocr = BankOcr()
 
-        account_numbers = bank_ocr.parse(input.all_digits())
+        account_numbers = bank_ocr.parse(sample_input.all_digits())
 
         self.assertEquals(1, len(account_numbers))
         self.assertEquals(AccountNumber("123456789"), account_numbers[0])

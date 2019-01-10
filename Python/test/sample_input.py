@@ -1,6 +1,6 @@
 """Shortcut methods to get input test data."""
 import os
-_dir_path = os.path.dirname(os.path.realpath(__file__))
+
 
 def all_digits():
     return _read("one_to_nine.txt")
@@ -50,6 +50,7 @@ def two_lines():
     return _read("two_lines.txt")
 
 
-def _read(fileName):
-    with open(_dir_path + "/resources/" + fileName) as f:
-        return f.readlines()
+def _read(file_name):
+    _dir_path = os.path.dirname(os.path.realpath(__file__))
+    with open(_dir_path + "/resources/" + file_name) as text_file:
+        return text_file.readlines()

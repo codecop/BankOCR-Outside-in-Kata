@@ -1,7 +1,7 @@
 # coding=utf-8
 
 
-class AccountNumber:
+class AccountNumber(object):
     """Value object for account numbers."""
 
     def __init__(self, number):
@@ -11,6 +11,9 @@ class AccountNumber:
         if isinstance(other, AccountNumber):
             return self._number == other._number
         return False
+
+    def __hash__(self):
+        return hash(self._number)
 
     def __str__(self):
         return self._number

@@ -2,7 +2,7 @@
 from kata.accountnumber import AccountNumber
 
 
-class BankOcr:
+class BankOcr(object):
     """Example for the outside interface of the API we need to create."""
 
     def __init__(self):
