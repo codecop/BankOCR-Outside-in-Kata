@@ -1,7 +1,8 @@
 # coding=utf-8
 import unittest
 
-from kata.bankocr import AccountNumber, BankOcr
+from kata.accountnumber import AccountNumber
+from kata.bankocr import BankOcr
 from test import input
 
 
