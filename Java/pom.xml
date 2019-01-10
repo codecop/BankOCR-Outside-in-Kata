@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.codecop</groupId>
-    <artifactId>bank-ocr</artifactId>
+    <artifactId>bankocr-kata</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
