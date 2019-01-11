@@ -1,4 +1,9 @@
+"use strict";
 const fs = require('fs');
+
+function read(fileName) {
+    fs.readFileSync(__dirname + '/resources/' + fileName, 'UTF-8');
+}
 
 /**
  * Shortcut methods to get input test data.
@@ -21,7 +26,3 @@ export const Input = {
     twoLines: () => read("two_lines.txt"),
 
 };
-
-function read(fileName) {
-    fs.readFileSync(__dirname + '/resources/' + fileName, 'UTF-8');
-}

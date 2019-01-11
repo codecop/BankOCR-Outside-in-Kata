@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * Value object for account numbers.
  */

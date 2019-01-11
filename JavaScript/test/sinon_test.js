@@ -1,4 +1,5 @@
 /* globals describe, it */
+"use strict";
 
 const { expect } = require('chai');
 const sinon = require('sinon');
@@ -20,7 +21,7 @@ describe('Sinon infrastructure', () => {
         // act
         foo.parse("abc");
         // assert
-        expect(foo.parse.alwaysCalledWithExactly("abc")).to.be.true;
+        expect(foo.parse.alwaysCalledWithExactly("abc")).to.equal(true);
     });
 
 });
