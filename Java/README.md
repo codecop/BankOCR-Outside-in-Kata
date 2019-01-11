@@ -10,7 +10,7 @@ are provided as dependencies.
 
 ### Where to start ###
 
-There is a failing guiding test `src/test/java/kata/BankOcrTest.java`,
+There is a failing guiding test `src/test/java/kata/GuidingTest.java`,
 which you can use as starting point. It tests the `src/main/java/kata/BankOcr.java`,
 which contains the empty, outside interface of the API you need to create.
 

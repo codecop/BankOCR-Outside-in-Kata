@@ -2,7 +2,7 @@
 
 namespace Kata.Tests
 {
-    public class BankOcrTest
+    public class GuidingTest
     {
         [Fact]
         public void ShouldParseOcrLine()

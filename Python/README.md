@@ -11,7 +11,7 @@ are provided by Python 3.
 
 ### Where to start ###
 
-There is a failing guiding test `test/test_bankocr.py`,
+There is a failing guiding test `test/test_guiding.py`,
 which you can use as starting point. It tests the `kata/bankocr.py`,
 which contains the empty, outside interface of the API you need to create.
 

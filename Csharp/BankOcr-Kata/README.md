@@ -11,7 +11,7 @@ are provided as dependencies.
 
 ### Where to start ###
 
-There is a failing guiding test `BankOcrTest.cs`,
+There is a failing guiding test `GuidingTest.cs`,
 which you can use as starting point. It tests the `BankOcr.cs`,
 which contains the empty, outside interface of the API you need to create.
 
