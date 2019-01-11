@@ -1,1 +1,1 @@
-@call python -m unittest discover -v -f test %*
+@call python -m unittest discover -v test %*
