@@ -123,9 +123,8 @@ FakesAssemblies/
 .paket/paket.exe
 paket-files/
 
-##
+
 ## Python
-##
 
 # compiled python modules
 *.pyc
@@ -144,3 +143,9 @@ env3.bat
 
 # Pylint
 .cache
+
+## JS/Node
+node_modules/
+npm-debug.log
+coverage/
+.stryker-tmp
