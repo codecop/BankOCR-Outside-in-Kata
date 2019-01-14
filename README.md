@@ -35,9 +35,5 @@ actual implementations (which, even though used, were not needed before
 thanks to abstractions). See [Emily Bache's article on Outside-In development](http://coding-is-like-cooking.info/2013/04/outside-in-development-with-double-loop-tdd/)
 for a discussion of Outside-In both with London school and classic TDD.
 
-## Other languages ##
-* [Javascript with Jasmine](https://bitbucket.org/carlosble/bankocr-kata) by Carlos Ble
-* [Blog post with Python integration test](http://technivore.org/posts/2013/12/23/coding-kata-bank-ocr.html) by Matthew Rich
-
 ### License ###
 [New BSD License](http://opensource.org/licenses/bsd-license.php), see `license.txt` in repository.
