@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Package" basedir="." default="zip">
+
+    <target name="zip">
+        <delete file="../bankocr-kata-setup-new.zip" />
+
+        <zip destfile="../bankocr-kata-setup-new.zip">
+            <zipfileset dir="." prefix="bankocr-kata-setup">
+                <exclude name="build.xml" />
+                <exclude name=".*" />
+                <exclude name="**/.*" />
+                <exclude name="**/.settings/**" />
+                <exclude name="**/.idea/**" />
+                <exclude name="**/*.iml" />
+                <exclude name="**/.vscode/**" />
+            </zipfileset>
+
+         </zip>
+    </target>
+
+</project>
