@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="Package" basedir="." default="zip">
 
-    <target name="zip">
+    <target name="zip" description="Create package for participants">
         <delete file="../bankocr-kata-setup-new.zip" />
 
         <zip destfile="../bankocr-kata-setup-new.zip">
             <zipfileset dir="." prefix="bankocr-kata-setup">
                 <exclude name="build.xml" />
+                <!-- ignore hg -->
                 <exclude name=".*" />
                 <exclude name="**/.*" />
+                <!-- ignore IDEs -->
                 <exclude name="**/.settings/**" />
                 <exclude name="**/.idea/**" />
                 <exclude name="**/*.iml" />
