@@ -1,3 +1,7 @@
+# BankOCR Outside-in TDD Kata Setup #
+
+[About the Assignment and the Constraint](../README.md).
+
 ## BankOCR Kata Python Setup ##
 
 This is a Python PIP project.

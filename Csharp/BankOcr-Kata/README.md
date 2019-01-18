@@ -1,4 +1,8 @@
-﻿## BankOCR Kata C# Setup ##
+﻿# BankOCR Outside-in TDD Kata Setup #
+
+[About the Assignment and the Constraint](../../README.md).
+
+## BankOCR Kata C# Setup ##
 
 This is a .NET Core 2.0 project.
 The programming language is C# 7.1 (Visual Studio 2017 version 15.3).

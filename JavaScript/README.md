@@ -1,3 +1,7 @@
+# BankOCR Outside-in TDD Kata Setup #
+
+[About the Assignment and the Constraint](../README.md).
+
 ## BankOCR Kata JavaScript Setup ##
 
 This is a JavaScript [npm](https://www.npmjs.com/) project.
