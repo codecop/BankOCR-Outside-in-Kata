@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="Package" basedir="." default="zip">
 
-    <target name="zip" description="Create package for participants">
+    <target name="check-samples" description="Check sample files for missing trailing whitespace">
+        <!-- see https://ant.apache.org/manual/Tasks/script.html -->
+        <script language="javascript">
+            <![CDATA[
+                // importClass(java.io.File); // - Rhino
+                var File = Java.type('java.io.File'); // - Nashorn
+
+                // create a <fileset dir="" includes="" />
+                var fs = project.createDataType("fileset");
+                fs.setDir(new File("."));
+                fs.appendIncludes(["**/only*.txt", "**/two_lines.txt"]);
+
+                // get the files (array) of that fileset
+                var ds = fs.getDirectoryScanner(project);
+                var srcFiles = ds.getIncludedFiles();
+
+                // iterate over that array
+                for(var i = 0; i < srcFiles.length; i++) {
+
+                    // get the values
+                    var basedir  = fs.getDir(project);
+                    var filename = srcFiles[i];
+                    var file = new File(basedir, filename);
+                    var size = file.length();
+
+                    if (size != 116 && size != 232) {
+                        // create and use a Task via Ant API
+                        var fail = project.createTask("fail");
+                        fail.setMessage(file + " is missing whitespace: " + size + " bytes");
+                        fail.perform();
+                    }
+                }
+            ]]>
+        </script>
+    </target>
+
+    <target name="zip" description="Create package for participants" depends="check-samples">
         <delete file="../bankocr-kata-setup-new.zip" />
 
         <zip destfile="../bankocr-kata-setup-new.zip">
