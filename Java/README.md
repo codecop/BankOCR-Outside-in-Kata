@@ -1,4 +1,8 @@
-﻿## BankOCR Kata Java Setup ##
+﻿# BankOCR Outside-in TDD Kata Setup #
+
+[About the Assignment and the Constraint](../README.md).
+
+## BankOCR Kata Java Setup ##
 
 This is an [Apache Maven](https://maven.apache.org/) project.
 The programming language is Java 8.
