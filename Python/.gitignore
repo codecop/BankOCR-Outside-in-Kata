@@ -1,0 +1,21 @@
+# Eclipse
+.pydevproject
+.buildpath
+
+# compiled python modules
+*.pyc
+
+# generated setup files
+*.egg-info
+*.egg
+build
+dist
+
+# VirtualEnv
+.virtual/
+env2.bat
+.virtual3/
+env3.bat
+
+# Pylint
+.cache
