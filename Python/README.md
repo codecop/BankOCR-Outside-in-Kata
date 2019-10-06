@@ -1,8 +1,8 @@
-# BankOCR Outside-in TDD Kata Setup #
+# BankOCR Outside-in TDD Kata Setup
 
 [About the Assignment and the Constraint](../README.md).
 
-## BankOCR Kata Python Setup ##
+## BankOCR Kata Python Setup
 
 This is a Python PIP project.
 It is compatible with both Python 2 and 3.
@@ -13,7 +13,7 @@ are provided by Python 3.
 * Run `pip install -r requirements.txt` to install the required packages.
 * Run `run_tests` (or `python -m unittest discover test`) to verify your setup and run the tests. You should see a test failure.
 
-### Where to start ###
+### Where to start
 
 There is a failing guiding test `test/test_guiding.py`,
 which you can use as starting point. It tests the `kata/bankocr.py`,

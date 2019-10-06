@@ -1,8 +1,8 @@
-﻿# BankOCR Outside-in TDD Kata Setup #
+﻿# BankOCR Outside-in TDD Kata Setup
 
 [About the Assignment and the Constraint](../../README.md).
 
-## BankOCR Kata C# Setup ##
+## BankOCR Kata C# Setup
 
 This is a .NET Core 2.0 project.
 The programming language is C# 7.1 (Visual Studio 2017 version 15.3).
@@ -13,7 +13,7 @@ are provided as dependencies.
 * Download the required dependency with `dotnet restore`.
 * Run `dotnet test` to verify your setup and run the tests. You should see a test failure.
 
-### Where to start ###
+### Where to start
 
 There is a failing guiding test `GuidingTest.cs`,
 which you can use as starting point. It tests the `BankOcr.cs`,

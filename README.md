@@ -1,9 +1,9 @@
-﻿# BankOCR Outside-in TDD Kata Setup #
+﻿# BankOCR Outside-in TDD Kata Setup
 
 [BankOCR Code Kata](http://codingdojo.org/kata/BankOCR/), initial setup
 for various programming languages focusing on Outside-In development.
 
-## Assignment: BankOCR ##
+## Assignment: BankOCR
 
 You work for a bank, which has a machine to assist in reading letters.
 The machine scans the paper documents, and produces a file with a
@@ -23,7 +23,7 @@ Write a program that can take this file and parse it into actual account numbers
 
 **Don't Focus on Getting it Done. Focus on Doing It Perfectly.**
 
-## Constraint: Outside-In ##
+## Constraint: Outside-In
 
 In Outside-In (London school, top-down or "mockist TDD") you build the
 system from the "outside-in", following the user interaction through
@@ -35,5 +35,6 @@ actual implementations (which, even though used, were not needed before
 thanks to abstractions). See [Emily Bache's article on Outside-In development](http://coding-is-like-cooking.info/2013/04/outside-in-development-with-double-loop-tdd/)
 for a discussion of Outside-In both with London school and classic TDD.
 
-### License ###
+### License
+
 [New BSD License](http://opensource.org/licenses/bsd-license.php), see `license.txt` in repository.

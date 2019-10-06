@@ -1,8 +1,8 @@
-﻿# BankOCR Outside-in TDD Kata Setup #
+﻿# BankOCR Outside-in TDD Kata Setup
 
 [About the Assignment and the Constraint](../README.md).
 
-## BankOCR Kata Java Setup ##
+## BankOCR Kata Java Setup
 
 This is an [Apache Maven](https://maven.apache.org/) project.
 The programming language is Java 8.
@@ -12,7 +12,7 @@ are provided as dependencies.
 * Verify your Java installation with `java -version` and `mvn -v`.
 * Run `mvn test` to verify your setup and run the tests. You should see a test failure.
 
-### Where to start ###
+### Where to start
 
 There is a failing guiding test `src/test/java/kata/GuidingTest.java`,
 which you can use as starting point. It tests the `src/main/java/kata/BankOcr.java`,
