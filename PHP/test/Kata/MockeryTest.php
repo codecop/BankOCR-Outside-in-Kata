@@ -1,5 +1,5 @@
 <?php
-namespace Kata;
+namespace Test\Kata;
 
 use \Mockery;
 
