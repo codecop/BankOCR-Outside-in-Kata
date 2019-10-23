@@ -1,7 +1,6 @@
-﻿using Org.Codecop.Hello;
-using Xunit;
+﻿using Xunit;
 
-namespace Org.Codecop.Hello.Tests
+namespace Kata.Tests
 {
     /// <summary>
     /// Test the xUnit infrastructure.

@@ -1,7 +1,6 @@
-﻿using Org.Codecop.Hello;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 
-namespace Org.Codecop.Hello.Tests
+namespace Kata.Tests
 {
     /// <summary>
     /// Test the NUnit infrastructure.
