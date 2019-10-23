@@ -1,0 +1,22 @@
+{
+    "name": "codecop/bankocr-outside-in-kata",
+    "description": "Bank OCR Outside-in TDD",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Peter Kofler",
+            "email": "peter.kofler@code-cop.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Kata\\": "src\/Kata\/"
+        }
+    },
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.8.*",
+        "mockery/mockery": "0.9.*"
+    }
+}
