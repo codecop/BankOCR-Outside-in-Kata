@@ -11,7 +11,7 @@ namespace Kata.Tests
         {
             var accountNumbers = new List<AccountNumber>() { new AccountNumber("123456789") };
 
-            Assert.Equal(1, accountNumbers.Count);
+            Assert.Single(accountNumbers);
             Assert.Equal(new AccountNumber("123456789"), accountNumbers[0]);
         }
 

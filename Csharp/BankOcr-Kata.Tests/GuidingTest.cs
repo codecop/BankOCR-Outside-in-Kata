@@ -17,7 +17,7 @@ namespace Kata.Tests
 
             var accountNumbers = bankOcr.Parse(Input.AllDigits());
 
-            Assert.Equal(1, accountNumbers.Count);
+            Assert.Single(accountNumbers);
             Assert.Equal(new AccountNumber("123456789"), accountNumbers[0]);
         }
 
