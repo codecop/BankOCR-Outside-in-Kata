@@ -6,6 +6,7 @@ import hamcrest
 
 class UnitTestCase(unittest.TestCase):
     """Test the unittest infrastructure."""
+
     # see https://docs.python.org/dev/library/unittest.html
 
     def test_plain_unittest(self):

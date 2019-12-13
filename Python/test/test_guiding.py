@@ -1,13 +1,12 @@
 # coding=utf-8
 import unittest
 
-from test import sample_input
 from kata.accountnumber import AccountNumber
 from kata.bankocr import BankOcr
+from test import sample_input
 
 
 class GuidingTestCase(unittest.TestCase):
-
     def test_parse_ocr_line(self):
         # TODO failing test, start here
         # guiding test from outside in as starting point.
