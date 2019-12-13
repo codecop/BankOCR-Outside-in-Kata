@@ -30,4 +30,14 @@ public class AccountNumberTest {
         assertEquals("123456789", accountNumber.toString());
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldValidateNumberLength() {
+        new AccountNumber("12345678");
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldValidateNumber() {
+        new AccountNumber("12345678n");
+    }
+
 }
