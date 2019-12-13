@@ -10,8 +10,8 @@ class AccountNumber
 
     public function __construct($number)
     {
-        if (number == null || preg_match("^\\d{9}$", $number) != 1) {
-            throw new \InvalidArgumentException(number);
+        if ($number == null || preg_match("/^\\d{9}$/", $number) != 1) {
+            throw new \InvalidArgumentException($number);
         }
         $this->number = $number;
     }

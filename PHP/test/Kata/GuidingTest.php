@@ -19,7 +19,7 @@ class GuidingTest extends \PHPUnit_Framework_TestCase
 
         $accountNumbers = $bankOcr->parse(Input::allDigits());
 
-        $this->assertEquals(1, $accountNumbers->size());
+        $this->assertEquals(1, count($accountNumbers));
         $this->assertEquals(new AccountNumber("123456789"), $accountNumbers[0]);
     }
 
