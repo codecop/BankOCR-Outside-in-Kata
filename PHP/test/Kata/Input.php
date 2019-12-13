@@ -69,7 +69,7 @@ class Input
 
     private static function read($fileName)
     {
-        $path = "test/resources/" . $fileName;
+        $path = __DIR__ . "/../resources/" . $fileName;
         return file($path, FILE_IGNORE_NEW_LINES);
     }
 
