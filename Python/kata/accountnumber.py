@@ -1,10 +1,15 @@
 # coding=utf-8
+import re
 
 
 class AccountNumber(object):
     """Value object for account numbers."""
 
     def __init__(self, number):
+        account_number_format = r'^\d{9}$'
+        if not number or not re.match(account_number_format, number):
+            raise ValueError(number)
+
         self._number = number
 
     def __eq__(self, other):
