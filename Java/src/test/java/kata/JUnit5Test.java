@@ -10,15 +10,15 @@ import org.junit.jupiter.api.Test;
 /**
  * Test the JUnit infrastructure.
  */
-public class JUnit5Test {
+class JUnit5Test {
 
     @Test
-    public void shouldAssertPlainJUnit() {
+    void shouldAssertPlainJUnit() {
         assertEquals(2, 1 + 1);
     }
 
     @Test
-    public void shouldAssertWithHamcrestCore() {
+    void shouldAssertWithHamcrestCore() {
         MatcherAssert.assertThat(1 + 1, is(equalTo(2)));
     }
 
