@@ -17,7 +17,8 @@ namespace Kata.Tests
         }
 
         [Test]
-        public void ShouldAssertWithNUnitMatchers() {
+        public void ShouldAssertWithNUnitMatchers()
+        {
             Assert.That(1 + 1, Is.EqualTo(2));
         }
     }
