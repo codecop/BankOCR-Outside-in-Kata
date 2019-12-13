@@ -1,8 +1,8 @@
 /* globals describe, it */
 "use strict";
 
-var chai = require('chai');
-var should = chai.should();
+const chai = require('chai');
+chai.should();
 
 const { AccountNumber } = require('../src/account_number');
 const { BankOcr } = require('../src/bankocr');

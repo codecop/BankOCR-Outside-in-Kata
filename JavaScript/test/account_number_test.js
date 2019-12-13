@@ -2,7 +2,7 @@
 'use strict';
 
 const chai = require('chai');
-const should = chai.should();
+chai.should();
 const expect = chai.expect;
 
 const { AccountNumber } = require('../src/account_number');
@@ -26,11 +26,11 @@ describe('AccountNumber', () => {
         accountNumber.toString().should.equal('123456789');
     });
 
-    it('shouldValidateNumberLength', () => {
+    it('should validate number length', () => {
         expect(() => new AccountNumber('12345678')).to.throw(Error);
     });
 
-    it('shouldValidateNumber', () => {
+    it('should validate number', () => {
         expect(() => new AccountNumber('12345678n')).to.throw(Error);
     });
 
