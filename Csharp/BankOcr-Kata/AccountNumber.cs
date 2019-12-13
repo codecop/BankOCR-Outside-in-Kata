@@ -1,4 +1,7 @@
-﻿namespace Kata
+﻿using System;
+using System.Text.RegularExpressions;
+
+namespace Kata
 {
     /// <summary>
     /// Value object for account numbers.
@@ -9,6 +12,11 @@
 
         public AccountNumber(string number)
         {
+            var accountNumberFormat = new Regex(@"^\d{9}$");
+            if (number == null || !accountNumberFormat.IsMatch(number))
+            {
+                throw new ArgumentException(number);
+            }
             this.number = number;
         }
 
@@ -16,13 +24,13 @@
         {
             if (ReferenceEquals(this, obj))
             {
-              return true;
+                return true;
             }
             if (ReferenceEquals(null, obj) || obj.GetType() != this.GetType())
             {
-              return false;
+                return false;
             }
-            var that = (AccountNumber) obj;
+            var that = (AccountNumber)obj;
             return this.number.Equals(that.number);
         }
 
