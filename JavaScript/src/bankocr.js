@@ -20,7 +20,7 @@ export class BankOcr {
             
         // TODO return an array of AccountNumber
         return [
-            new AccountNumber('111111111')
+            this.parseScanLine(undefined)
         ]
     }
 

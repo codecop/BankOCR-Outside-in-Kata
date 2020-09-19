@@ -10,7 +10,7 @@ const { Input } = require('./sample_input');
 
 describe('Guiding BankOCR', () => {
 
-    it('should parse OCR line', () => {
+    it.skip('should parse OCR line', () => {
         // TODO failing test, start here
         // guiding test from outside in as starting point.
         // a) ignore this test

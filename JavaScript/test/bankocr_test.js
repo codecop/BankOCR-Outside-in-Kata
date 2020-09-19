@@ -7,7 +7,7 @@ chai.should();
 
 
 describe('BankOCR', () => {
-    it('should call parser for single line', () => {
+    it('should parse single line of ones', () => {
         const lineGrouper = (rawLines) => {
             return [
                 [
@@ -26,4 +26,26 @@ describe('BankOCR', () => {
         accountNumbers.length.should.equal(1);
         accountNumbers[0].should.deep.equal(new AccountNumber("111111111"));
     })
+
+    
+    it('should parse single line of twos', () => {
+        const lineGrouper = (rawLines) => {
+            return [
+                [
+                    ' _  _  _  _  _  _  _  _  _ ', 
+                    ' _| _| _| _| _| _| _| _| _|',
+                    '|_ |_ |_ |_ |_ |_ |_ |_ |_ ',
+                ]
+            ]
+        }
+        const parseScanLine = (scanLine) => {
+            return new AccountNumber('222222222')
+        }
+        const bankOcr = new BankOcr({ lineGrouper, parseScanLine });
+        
+        const accountNumbers = bankOcr.parse(Input.onlyTwos())
+        accountNumbers.length.should.equal(1);
+        accountNumbers[0].should.deep.equal(new AccountNumber("222222222"));
+    })
+    
 })
