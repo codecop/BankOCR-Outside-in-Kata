@@ -24,5 +24,5 @@ export const Input = {
     onlyNines: () => read("only_nines.txt"),
 
     twoLines: () => read("two_lines.txt"),
-
+    onesAndTwosIn2Lines: () => read("ones_and_twos_in_2_lines.txt"),
 };

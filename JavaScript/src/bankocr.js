@@ -13,15 +13,8 @@ export class BankOcr {
     }
 
     parse(rawLines) {
-        // groupRowLinesIntoScanLines
-        // loopScanLines
-            // parseEachScanLine
-            // collect
-            
-        // TODO return an array of AccountNumber
-        return [
-            this.parseScanLine(undefined)
-        ]
+        return this.lineGrouper(rawLines)
+            .map((lines) => this.parseScanLine(lines))
     }
 
 }

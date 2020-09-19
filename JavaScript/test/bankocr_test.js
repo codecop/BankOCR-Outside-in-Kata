@@ -47,5 +47,34 @@ describe('BankOCR', () => {
         accountNumbers.length.should.equal(1);
         accountNumbers[0].should.deep.equal(new AccountNumber("222222222"));
     })
+
+    it('should parse 2 lines with different account numbers', () => {
+        const lineGrouper = (rawLines) => {
+            return [
+                [
+                    '                           ', 
+                    '  |  |  |  |  |  |  |  |  |',
+                    '  |  |  |  |  |  |  |  |  |',
+                ],
+                [
+                    ' _  _  _  _  _  _  _  _  _ ', 
+                    ' _| _| _| _| _| _| _| _| _|',
+                    '|_ |_ |_ |_ |_ |_ |_ |_ |_ ',
+                ]
+            ]
+        }
+        const parseScanLine = (scanLine) => {
+            if (scanLine[0] === '                           ') {
+                return new AccountNumber('111111111')
+            }
+            return new AccountNumber('222222222')
+        }
+        const bankOcr = new BankOcr({ lineGrouper, parseScanLine });
+
+        const accountNumbers = bankOcr.parse(Input.onesAndTwosIn2Lines())
+        accountNumbers.length.should.equal(2);
+        accountNumbers[0].should.deep.equal(new AccountNumber("111111111"));
+        accountNumbers[1].should.deep.equal(new AccountNumber("222222222"));
+    })
     
 })
