@@ -7,12 +7,21 @@ import { AccountNumber } from "./account_number";
  */
 export class BankOcr {
 
-    constructor() {
+    constructor({ lineGrouper, parseScanLine } = {}) {
+        this.lineGrouper = lineGrouper
+        this.parseScanLine = parseScanLine
     }
 
     parse(rawLines) {
+        // groupRowLinesIntoScanLines
+        // loopScanLines
+            // parseEachScanLine
+            // collect
+            
         // TODO return an array of AccountNumber
-        throw new Error("not implemented");
+        return [
+            new AccountNumber('111111111')
+        ]
     }
 
 }
