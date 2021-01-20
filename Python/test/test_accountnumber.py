@@ -19,6 +19,11 @@ class AccountNumberTestCase(unittest.TestCase):
 
         self.assertEqual("123456789", str(account_number))
 
+    def test_repr(self):
+        account_number = AccountNumber("123456789")
+
+        self.assertEqual("AccountNumber('123456789')", repr(account_number))
+
     def test_validate_number_length(self):
         self.assertRaises(ValueError, lambda: AccountNumber("12345678"))
 

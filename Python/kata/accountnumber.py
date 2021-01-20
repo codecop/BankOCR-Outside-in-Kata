@@ -20,5 +20,8 @@ class AccountNumber(object):
     def __hash__(self):
         return hash(self._number)
 
+    def __repr__(self):
+        return 'AccountNumber({!r})'.format(self._number)
+
     def __str__(self):
         return self._number
