@@ -8,7 +8,7 @@ class AccountNumber(object):
     def __init__(self, number):
         account_number_format = r'^\d{9}$'
         if not number or not re.match(account_number_format, number):
-            raise ValueError(number)
+            raise ValueError('invalid account number: {!r} (exactly 9 digits required)'.format(number))
 
         self._number = number
 
@@ -19,6 +19,9 @@ class AccountNumber(object):
 
     def __hash__(self):
         return hash(self._number)
+
+    def __repr__(self):
+        return 'AccountNumber({!r})'.format(self._number)
 
     def __str__(self):
         return self._number
