@@ -1,3 +1,5 @@
+(include "account-number.scm")
+
 ; standard function
 (define (drop x n)
     (if
@@ -28,8 +30,7 @@
 )
 
 (define (parse-line ocr-line)
-    (parse-digits (split-digits ocr-line))
-)
+    (make-account-number (parse-digits (split-digits ocr-line))))
 
 (define (split-digits ocr-line)
 ; what is happening here?

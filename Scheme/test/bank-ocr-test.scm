@@ -14,8 +14,8 @@
 ;
 ; guiding test against bank-ocr
 (test-case "guiding test"
-    (assert-string-list=
-        (list "123456789")
+    (assert-list= account-number->string account-number=?
+        (list (make-account-number "123456789"))
         (bank-ocr all-digits)))
 
 ;
@@ -57,7 +57,9 @@
 )
 
 (test-case "should parse digit into number for each digit"
-    (assert-string= "111" (parse-digits (list ocr-digit-one ocr-digit-one ocr-digit-one))))
+    (assert-string=
+        "111"
+        (parse-digits (list ocr-digit-one ocr-digit-one ocr-digit-one))))
 
 ;
 ;
@@ -96,27 +98,29 @@
 )
 
 (test-case "should split and parse first digit"
-    (assert-string= "1" (parse-line ocr-digit-one)))
+    (assert-equal account-number->string account-number=?
+        (make-account-number "1")
+        (parse-line ocr-digit-one)))
 
 ;
 ;
 ; unit tests against bank-ocr
 (test-case "should return empty list on empty input"
-    (assert-string-list=
+    (assert-list= account-number->string account-number=?
         (list)
         (bank-ocr (list))))
 
 ; stub
 (define (parse-line ocr-line)
-    "123456789"
+    (make-account-number "123456789")
 )
 
 (test-case "should call parse-line for single group of lines"
-    (assert-string-list=
-        (list "123456789")
+    (assert-list= account-number->string account-number=?
+        (list (make-account-number "123456789"))
         (bank-ocr all-digits)))
 
 (test-case "should call parse-line for each group of lines"
-    (assert-string-list=
-        (list "123456789" "123456789")
+    (assert-list= account-number->string account-number=?
+        (list (make-account-number "123456789") (make-account-number "123456789"))
         (bank-ocr (append all-digits all-digits))))
