@@ -1,7 +1,9 @@
 @color 02
-call r5rs test\bank-ocr-test.scm
+call r5rs test\scheme-unit-test.scm
 @if ERRORLEVEL 1 goto :fail
 
+call r5rs test\bank-ocr-test.scm
+@if ERRORLEVEL 1 goto :fail
 
 @echo test suite OK
 @goto :stop
