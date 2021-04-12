@@ -1,4 +1,5 @@
 (include "assert-r5rs.scm")
+(include "sample-input.scm")
 (include "../bank-ocr.scm")
 
 (test-case "drop"
@@ -7,15 +8,6 @@
     (assert-number-list= (take (list 1 2 3) 2) (list 1 2)))
 
 ; how to represent an account number? object or string?
-
-(define all-digits
-    (list
-        "    _  _     _  _  _  _  _ "
-        "  | _| _||_||_ |_   ||_||_|"
-        "  ||_  _|  | _||_|  ||_| _|"
-        "                           "
-    )
-)
 
 ; original API was
 ; List<AccountNumber> parse(List<String> rawLines)
