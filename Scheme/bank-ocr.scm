@@ -15,10 +15,10 @@
     )
 )
 
+;; Example for the outside interface of the API we need to create.
 (define (bank-ocr ocr-lines)
-; what is happening here?
-; 1. split input into group of 4 lines
-; 5. return list of all digits
+    ; TODO return a list of account-number
+    ; (error "not implemented")
     (if
         (null? ocr-lines)
         '() ;'

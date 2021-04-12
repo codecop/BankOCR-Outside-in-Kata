@@ -1,5 +1,4 @@
-;;; Value object for account numbers.
-
+;; Value object for account numbers.
 (define-type account-number value)
 
 (define (account-number=? number other)

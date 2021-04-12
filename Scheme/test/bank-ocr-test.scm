@@ -1,5 +1,6 @@
 (include "assert-r5rs.scm")
 (include "sample-input.scm")
+
 (include "../bank-ocr.scm")
 
 (test-case "drop"
