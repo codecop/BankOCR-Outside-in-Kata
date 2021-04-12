@@ -16,7 +16,7 @@
 (test-case "guiding test"
     (assert-list= account-number->string account-number=?
         (list (make-account-number "123456789"))
-        (bank-ocr all-digits)))
+        (bank-ocr sample-input-all-digits)))
 
 ;
 ;
@@ -118,9 +118,9 @@
 (test-case "should call parse-line for single group of lines"
     (assert-list= account-number->string account-number=?
         (list (make-account-number "123456789"))
-        (bank-ocr all-digits)))
+        (bank-ocr sample-input-all-digits)))
 
 (test-case "should call parse-line for each group of lines"
     (assert-list= account-number->string account-number=?
         (list (make-account-number "123456789") (make-account-number "123456789"))
-        (bank-ocr (append all-digits all-digits))))
+        (bank-ocr (append sample-input-all-digits sample-input-all-digits))))

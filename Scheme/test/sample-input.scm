@@ -1,82 +1,82 @@
 ;;; Shortcut methods to get input test data.
 
-(define all-digits
+(define sample-input-all-digits
     (list
         "    _  _     _  _  _  _  _ "
         "  | _| _||_||_ |_   ||_||_|"
         "  ||_  _|  | _||_|  ||_| _|"
         "                           "))
 
-(define only-zeroes
+(define sample-input-only-zeroes
     (list
         " _  _  _  _  _  _  _  _  _ "
         "| || || || || || || || || |"
         "|_||_||_||_||_||_||_||_||_|"
         "                           "))
 
-(define only-ones
+(define sample-input-only-ones
     (list
         "                           "
         "  |  |  |  |  |  |  |  |  |"
         "  |  |  |  |  |  |  |  |  |"
         "                           "))
 
-(define only-twos
+(define sample-input-only-twos
     (list
         " _  _  _  _  _  _  _  _  _ "
         " _| _| _| _| _| _| _| _| _|"
         "|_ |_ |_ |_ |_ |_ |_ |_ |_ "
         "                           "))
-(define only-threes
+(define sample-input-only-threes
     (list
         " _  _  _  _  _  _  _  _  _ "
         " _| _| _| _| _| _| _| _| _|"
         " _| _| _| _| _| _| _| _| _|"
         "                           "))
 
-(define only-fours
+(define sample-input-only-fours
     (list
         "                           "
         "|_||_||_||_||_||_||_||_||_|"
         "  |  |  |  |  |  |  |  |  |"
         "                           "))
 
-(define only-fives
+(define sample-input-only-fives
     (list
         " _  _  _  _  _  _  _  _  _ "
         "|_ |_ |_ |_ |_ |_ |_ |_ |_ "
         " _| _| _| _| _| _| _| _| _|"
         "                           "))
 
-(define only-sixes
+(define sample-input-only-sixes
     (list
         " _  _  _  _  _  _  _  _  _ "
         "|_ |_ |_ |_ |_ |_ |_ |_ |_ "
         "|_||_||_||_||_||_||_||_||_|"
         "                           "))
 
-(define only-sevens
+(define sample-input-only-sevens
     (list
         " _  _  _  _  _  _  _  _  _ "
         "  |  |  |  |  |  |  |  |  |"
         "  |  |  |  |  |  |  |  |  |"
         "                           "))
 
-(define only-eights
+(define sample-input-only-eights
     (list
         " _  _  _  _  _  _  _  _  _ "
         "|_||_||_||_||_||_||_||_||_|"
         "|_||_||_||_||_||_||_||_||_|"
         "                           "))
 
-(define only-nines
+(define sample-input-only-nines
     (list
         " _  _  _  _  _  _  _  _  _ "
         "|_||_||_||_||_||_||_||_||_|"
         " _| _| _| _| _| _| _| _| _|"
         "                           "))
 
-(define two-lines
+(define sample-input-two-lines
     (list
         "    _  _     _  _  _  _  _ "
         "  | _| _||_||_ |_   ||_||_|"
