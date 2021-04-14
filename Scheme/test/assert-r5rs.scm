@@ -70,13 +70,15 @@
 
 (define (assert-list= to-string eq-op expected-list actual-list)
     (define (item i)
-        (string-append (number->string i) ". item "))
+        (string-append (number->string i)
+                       ". item "))
     (define (check-list-element i expected actual)
         (let* ((expected-l (length expected))
                (actual-l   (length actual))
                (no-more?   (< expected-l actual-l))
                (has-more?  (> expected-l actual-l))
-               (both-null? (and (null? expected) (null? actual))))
+               (both-null? (and (null? expected)
+                                (null? actual))))
             (cond (both-null? -success-marker)
                   (no-more?   (fail (-make-message (item (+ i expected-l))
                                                    "no more elements"
@@ -92,18 +94,19 @@
                (no-sublist?      (pair? actual-element))
                (both-pair?       (and sublist? no-sublist?)))
             (cond (both-pair?  (append ; dummy chaining
-                                       (check-list-element (+ (* i 10) 1)
-                                                            expected-element
-                                                            actual-element)
+                                       (check-list-element (+ (* i 10)
+                                                              1)
+                                                           expected-element
+                                                           actual-element)
                                        (check-list-element (+ i 1)
                                                            (cdr expected)
                                                            (cdr actual))))
                   (sublist?    (fail (-make-message (item i)
-                                                   "a sublist"
-                                                   "no sublist")))
+                                                    "a sublist"
+                                                    "no sublist")))
                   (no-sublist? (fail (-make-message (item i)
-                                                   "no sublist"
-                                                   "a sublist")))
+                                                    "no sublist"
+                                                    "a sublist")))
                   (else        (append ; dummy chaining
                                        (check-numbered i expected-element actual-element)
                                        (check-list-element (+ i 1)
@@ -111,8 +114,8 @@
                                                            (cdr actual)))))))
     (define (check-numbered i expected actual)
         (check (-make-message (item i)
-                             (to-string expected)
-                             (to-string actual))
+                              (to-string expected)
+                              (to-string actual))
                (eq-op expected actual)))
     (lambda ()
         (check-list-element 1 expected-list actual-list)))
