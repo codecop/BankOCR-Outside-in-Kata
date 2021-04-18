@@ -19,8 +19,8 @@
 ;;
 ;; guiding test against bank-ocr
 (test-case "guiding test"
-    (assert-list= values
-                  string=?
+    (assert-list= account-number-value
+                  account-number=?
                   (list (make-account-number "123456789"))
                   (bank-ocr sample-input-all-digits)))
 
@@ -97,7 +97,7 @@
 ;;
 ;; unit tests against bank-ocr
 (test-case "should return empty list on empty input"
-    (assert-list= account-number->string
+    (assert-list= account-number-value
                   account-number=?
                   (list)
                   (bank-ocr (list))))
@@ -107,14 +107,14 @@
     (make-account-number "123456789"))
 
 (test-case "should call parse-line for single group of lines"
-    (assert-list= values
-                  string=?
+    (assert-list= account-number-value
+                  account-number=?
                   (list (make-account-number "123456789"))
                   (bank-ocr sample-input-all-digits)))
 
 (test-case "should call parse-line for each group of lines"
-    (assert-list= values
-                  string=?
+    (assert-list= account-number-value
+                  account-number=?
                   (list (make-account-number "123456789")
                         (make-account-number "123456789"))
                   (bank-ocr (append sample-input-all-digits sample-input-all-digits))))

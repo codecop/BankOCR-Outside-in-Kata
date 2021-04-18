@@ -1,13 +1,12 @@
 ;;;
-;;; Unit test framework for Scheme R5RS.
-;;; Copyright (c) 2015, Peter Kofler, http://www.code-cop.org/
-;;; BSD licensed.
+;;; assert-scm - Minimalist xUnit test framework for Scheme R5RS.
+;;; https://github.com/codecop/assert-scm
+;;; Copyright (c) 2015, Peter Kofler, BSD 3-Clause License
 ;;;
 ;;; Non R5RS used functions
 ;;; * error from SRFI 23, available in Gambit, Chicken.
 ;;;
 
-;; SchemeUnit from http://c2.com/cgi/wiki?SchemeUnit
 ;; @formatter:align_list_of_strings:False
 
 (define (fail msg)
@@ -68,24 +67,78 @@
 (define (assert-char= expected actual)
     (assert-equal string char=? expected actual))
 
-(define (assert-list= to-string eq-op expected-list actual-list)
+;; private or library function
+(define (-interval-inside? center radius x)
+    (<= (abs (- center x))
+        radius))
+
+;; private - library function
+(define (-interval->string center radius)
+    (string-append "["
+                   (number->string (- center radius))
+                   "-"
+                   (number->string (+ center radius))
+                   "]"))
+
+(define (assert-inexact= expected actual delta)
+    (make-check (-make-message "in range "
+                               (-interval->string expected delta)
+                               (number->string actual))
+                (-interval-inside? expected delta actual)))
+
+(define (-make-message-numbered i expected actual)
     (define (item i)
         (string-append (number->string i)
                        ". item "))
+    (-make-message (item i)
+                   expected
+                   actual))
+
+(define (-check-numbered= i to-string eq-op expected actual)
+    (check (-make-message-numbered i
+                                   (to-string expected)
+                                   (to-string actual))
+           (eq-op expected actual)))
+
+(define (assert-list= to-string eq-op expected-list actual-list)
     (define (check-list-element i expected actual)
         (let* ((expected-l (length expected))
                (actual-l   (length actual))
                (no-more?   (< expected-l actual-l))
                (has-more?  (> expected-l actual-l))
-               (both-null? (and (null? expected)
-                                (null? actual))))
+               (both-null? (and (null? expected) (null? actual))))
             (cond (both-null? -success-marker)
-                  (no-more?   (fail (-make-message (item (+ i expected-l))
-                                                   "no more elements"
-                                                   "more elements")))
-                  (has-more?  (fail (-make-message (item (+ i actual-l))
-                                                   "more elements"
-                                                   "no more elements")))
+                  (no-more?   (fail (-make-message-numbered (+ i expected-l)
+                                                            "no more elements"
+                                                            "more elements")))
+                  (has-more?  (fail (-make-message-numbered (+ i actual-l)
+                                                            "more elements"
+                                                            "no more elements")))
+                  (else       (check-element i expected actual)))))
+    (define (check-element i expected actual)
+        (let* ((expected-element (car expected))
+               (actual-element   (car actual)))
+            (append (-check-numbered= i to-string eq-op expected-element actual-element)
+                    (check-list-element (+ i 1)
+                                        (cdr expected)
+                                        (cdr actual)))))
+    (lambda ()
+        (check-list-element 1 expected-list actual-list)))
+
+(define (assert-list-deep= to-string eq-op expected-list actual-list)
+    (define (check-list-element i expected actual)
+        (let* ((expected-l (length expected))
+               (actual-l   (length actual))
+               (no-more?   (< expected-l actual-l))
+               (has-more?  (> expected-l actual-l))
+               (both-null? (and (null? expected) (null? actual))))
+            (cond (both-null? -success-marker)
+                  (no-more?   (fail (-make-message-numbered (+ i expected-l)
+                                                            "no more elements"
+                                                            "more elements")))
+                  (has-more?  (fail (-make-message-numbered (+ i actual-l)
+                                                            "more elements"
+                                                            "no more elements")))
                   (else       (check-element i expected actual)))))
     (define (check-element i expected actual)
         (let* ((expected-element (car expected))
@@ -94,37 +147,27 @@
                (no-sublist?      (pair? actual-element))
                (both-pair?       (and sublist? no-sublist?)))
             (cond (both-pair?  (append ; dummy chaining
-                                       (check-list-element (+ (* i 10)
-                                                              1)
+                                       (check-list-element (+ 1 (* i 10))
                                                            expected-element
                                                            actual-element)
                                        (check-list-element (+ i 1)
                                                            (cdr expected)
                                                            (cdr actual))))
-                  (sublist?    (fail (-make-message (item i)
-                                                    "a sublist"
-                                                    "no sublist")))
-                  (no-sublist? (fail (-make-message (item i)
-                                                    "no sublist"
-                                                    "a sublist")))
+                  (sublist?    (fail (-make-message-numbered i "a sublist" "no sublist")))
+                  (no-sublist? (fail (-make-message-numbered i "no sublist" "a sublist")))
                   (else        (append ; dummy chaining
-                                       (check-numbered i expected-element actual-element)
+                                       (-check-numbered= i to-string eq-op expected-element actual-element)
                                        (check-list-element (+ i 1)
                                                            (cdr expected)
                                                            (cdr actual)))))))
-    (define (check-numbered i expected actual)
-        (check (-make-message (item i)
-                              (to-string expected)
-                              (to-string actual))
-               (eq-op expected actual)))
     (lambda ()
         (check-list-element 1 expected-list actual-list)))
 
 (define (assert-string-list= expected-list actual-list)
-    (assert-list= values string=? expected-list actual-list))
+    (assert-list-deep= values string=? expected-list actual-list))
 
 (define (assert-number-list= expected-list actual-list)
-    (assert-list= number->string = expected-list actual-list))
+    (assert-list-deep= number->string = expected-list actual-list))
 
 ;; private or library function
 (define (-boolean->string b)
@@ -155,6 +198,13 @@
 (define (assert-not-null actual)
     (make-check (-make-message "" "not null" "null")
                 (not (null? actual))))
+
+(define (assert-all . assertions)
+    (lambda ()
+        (let ((results (map -test-case-assert assertions)))
+            (if (zero? (apply + results))
+                0
+                -success-marker))))
 
 (define (-test-case-name name)
     (display (-in-white name))
